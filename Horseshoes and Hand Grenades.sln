@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horseshoes and Hand Grenades", "Assembly-CSharp.csproj", "{E0C6939E-B20C-F3AC-12A6-C4F9464C9BC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Horseshoes and Hand Grenades", "Assembly-CSharp-Editor.csproj", "{FD73BCFE-F99B-844E-CEBB-90C885321704}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0C6939E-B20C-F3AC-12A6-C4F9464C9BC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C6939E-B20C-F3AC-12A6-C4F9464C9BC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C6939E-B20C-F3AC-12A6-C4F9464C9BC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C6939E-B20C-F3AC-12A6-C4F9464C9BC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD73BCFE-F99B-844E-CEBB-90C885321704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD73BCFE-F99B-844E-CEBB-90C885321704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD73BCFE-F99B-844E-CEBB-90C885321704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD73BCFE-F99B-844E-CEBB-90C885321704}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
