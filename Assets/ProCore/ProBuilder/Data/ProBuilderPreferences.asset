@@ -19,12 +19,19 @@ MonoBehaviour:
   - pbUVEditorFloating
   - pb_UVTemplate_transparentBackground
   - pb_UVTemplate_hideGrid
+  - pbEnableBackfaceSelection
+  - pbDragSelectWholeElement
+  - pbShowMover
+  - pbShowTrigger
+  - pbShowDetail
+  - pbShowCollider
   m_Int_keys:
   - pbDefaultEditLevel
   - pbDefaultSelectionMode
   - pb_GIWorkflowMode
   - pbHandleAlignment
   - pb_UVTemplate_imageSize
+  - pbDragSelectMode
   m_Float_keys:
   - pb_SmoothingGroupEditor::m_PreviewOpacity
   - pbEditorScroll.x
@@ -35,8 +42,8 @@ MonoBehaviour:
   - pb_UVTemplate_backgroundColor
   m_Color_keys: []
   m_Material_keys: []
-  m_Bool_values: 00000001000101
-  m_Int_values: 0400000002000000000000000000000000040000
+  m_Bool_values: 00000001000101000001010101
+  m_Int_values: 010000000200000000000000000000000004000001000000
   m_Float_values:
   - 0.5
   - 0
