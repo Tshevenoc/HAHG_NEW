@@ -150,6 +150,11 @@ SubstanceImporter:
       filterMode: 1
       aniso: 1
       wrapMode: 0
+    - name: EasyGrass_roughness
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
     textureAssignments:
     - shaderProp: _MainTex
       material: {instanceID: 0}
