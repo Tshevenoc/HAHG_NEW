@@ -8,11 +8,15 @@ public class Pick_Up : MonoBehaviour {
     private SteamVR_TrackedController grabbingCont = null;
     private FixedJoint holdJoint = null;
     private Vector3 oldPos;
+    GameObject horseshoe;
+    private Vector3 originalPosition;
+    public float gripDistance;
 
     // Use this for initialization
     void Start()
     {
-
+        horseshoe = GameObject.FindGameObjectWithTag("Horseshoe");
+        originalPosition = horseshoe.transform.position;
     }
 
     // Update is called once per frame
@@ -21,7 +25,7 @@ public class Pick_Up : MonoBehaviour {
 
         bool newgrab = false;
 
-        if (left.gripped && (transform.position - left.transform.position).sqrMagnitude < transform.localScale.sqrMagnitude / 4)
+        if (left.gripped && (transform.position - left.transform.position).magnitude < gripDistance)
         {
 
             if (grabbingCont != left)
@@ -36,7 +40,7 @@ public class Pick_Up : MonoBehaviour {
 
             isGrabbed = true;
         }
-        else if (right.gripped && (transform.position - right.transform.position).sqrMagnitude < transform.localScale.sqrMagnitude / 4)
+        else if (right.gripped && (transform.position - right.transform.position).magnitude < gripDistance)
         {
 
             if (grabbingCont != right)
@@ -62,6 +66,15 @@ public class Pick_Up : MonoBehaviour {
             holdJoint = gameObject.AddComponent<FixedJoint>();
             holdJoint.connectedBody = grabbingCont.GetComponent<Rigidbody>();
             holdJoint.breakForce = 400;
+            Debug.Log(holdJoint.gameObject.tag);
+            if (holdJoint.gameObject.tag == "resetButton")
+            {
+                Debug.Log("reset");
+
+                horseshoe.transform.position = originalPosition;
+
+                horseshoe.GetComponent<Rigidbody>().velocity = new Vector3();
+            }
         }
 
         if (!isGrabbed && grabbingCont != null)

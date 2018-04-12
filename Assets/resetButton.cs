@@ -10,13 +10,14 @@ public class resetButton : MonoBehaviour {
         //defPos = horseshoe.transform.position;
         //defRot = horseshoe.transform.localRotation;
         //defScale = horseshoe.transform.localScale;
-    }
-	
-	// Update is called once per frame
-	void onTriggerEnter (Collider other)
-    {
         horseshoe = GetComponent<GameObject>();
+    }
+
+    // Update is called once per frame
+    void OnEnterTrigger(Collider collider)
+    {
         horseshoe.transform.position = new Vector3(5.9954e-09f, 0.014821f, 3.1607e-08f);
         Debug.Log("triggered");
+           
     }
 }

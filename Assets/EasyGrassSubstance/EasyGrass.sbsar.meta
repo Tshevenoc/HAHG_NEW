@@ -33,7 +33,7 @@ SubstanceImporter:
         stringvalue: 
     - name: Zoom
       value:
-        scalar[0]: 4.71
+        scalar[0]: 5.292
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -41,7 +41,7 @@ SubstanceImporter:
         stringvalue: 
     - name: Grass_Thickness
       value:
-        scalar[0]: 2.859
+        scalar[0]: 2.471
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0
@@ -66,7 +66,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 1, y: 1}
+      scale: {x: 100, y: 100}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 0
@@ -75,11 +75,11 @@ SubstanceImporter:
       texEnvs:
       - _BumpMap:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 10, y: 100}
           offset: {x: 0, y: 0}
       - _DetailAlbedoMap:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 1, y: 0}
           offset: {x: 0, y: 0}
       - _DetailMask:
           texture: {instanceID: 0}
@@ -91,15 +91,15 @@ SubstanceImporter:
           offset: {x: 0, y: 0}
       - _EmissionMap:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 100, y: 100}
           offset: {x: 0, y: 0}
       - _MainTex:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 100, y: 100}
           offset: {x: 0, y: 0}
       - _MetallicGlossMap:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 10, y: 100}
           offset: {x: 0, y: 0}
       - _OcclusionMap:
           texture: {instanceID: 0}
@@ -107,7 +107,7 @@ SubstanceImporter:
           offset: {x: 0, y: 0}
       - _ParallaxMap:
           texture: {instanceID: 0}
-          scale: {x: 1, y: 1}
+          scale: {x: 10, y: 100}
           offset: {x: 0, y: 0}
       floats:
       - _BumpScale: 1
@@ -146,6 +146,11 @@ SubstanceImporter:
       aniso: 1
       wrapMode: 0
     - name: EasyGrass_height
+      alphaSource: 0
+      filterMode: 1
+      aniso: 1
+      wrapMode: 0
+    - name: EasyGrass_roughness
       alphaSource: 0
       filterMode: 1
       aniso: 1
