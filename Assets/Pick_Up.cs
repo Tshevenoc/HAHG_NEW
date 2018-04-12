@@ -10,6 +10,7 @@ public class Pick_Up : MonoBehaviour {
     private Vector3 oldPos;
     GameObject horseshoe;
     private Vector3 originalPosition;
+    public float gripDistance;
 
     // Use this for initialization
     void Start()
@@ -24,7 +25,7 @@ public class Pick_Up : MonoBehaviour {
 
         bool newgrab = false;
 
-        if (left.gripped && (transform.position - left.transform.position).sqrMagnitude < transform.localScale.sqrMagnitude / 4)
+        if (left.gripped && (transform.position - left.transform.position).magnitude < gripDistance)
         {
 
             if (grabbingCont != left)
@@ -39,7 +40,7 @@ public class Pick_Up : MonoBehaviour {
 
             isGrabbed = true;
         }
-        else if (right.gripped && (transform.position - right.transform.position).sqrMagnitude < transform.localScale.sqrMagnitude / 4)
+        else if (right.gripped && (transform.position - right.transform.position).magnitude < gripDistance)
         {
 
             if (grabbingCont != right)
