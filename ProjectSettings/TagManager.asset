@@ -6,6 +6,11 @@ TagManager:
   tags:
   - resetButton
   - Horseshoe
+  - ground
+  - Stake
+  - Scoreboard
+  - HighScore
+  - CurrentScore
   layers:
   - Default
   - TransparentFX
