@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class throwCalculation : MonoBehaviour {
 
-    private float distance = 0;
+    float distance = 0;
+    float distanceChanged = 0;
     GameObject horseshoe1;
     GameObject stake;
-    private bool firstThrow = true;
-    private float currentHighScore = 0;
+    int currentHighScore;
     TextMesh highScore;
     TextMesh currentScore;
 
@@ -16,25 +16,22 @@ public class throwCalculation : MonoBehaviour {
     void Start () {
         horseshoe1 = GameObject.FindGameObjectWithTag("Horseshoe");
         stake = GameObject.FindGameObjectWithTag("Stake");
-        highScore = TextMesh.Find("HighScoretext").GetComponent<TextMesh>();
-        currentScore = TextMesh.Find("CurrentScoretext").GetComponent<TextMesh>();
-
+        highScore = GameObject.Find("HighScoretext").GetComponent<TextMesh>();
+        currentScore = GameObject.Find("CurrentScoretext").GetComponent<TextMesh>();
     }
 
     // Update is called once per frame
     void Update () {
-        currentScore.text = distance;
-
-        if (firstThrow == true) {
-            highScore.text = distance;
-            firstThrow = false;
-            currentHighScore = distance;
-        } else if (distance < currentHighScore) {
-            highScore.text = distance;
-            currentHighScore = distance;
-        }else
+        currentScore.text = ((int)distance).ToString();
+        //highScore.text = currentHighScore.ToString();
+        if (distanceChanged == 0)
         {
-            highScore.text = currentHighScore;
+            distanceChanged = distance;
+            currentHighScore = (int)distance;
+            highScore.text = ((int)distance).ToString();
+        }else if ((int)distance < currentHighScore) {
+            highScore.text = ((int)distance).ToString();
+            currentHighScore = (int)distance;
         }
     }
 

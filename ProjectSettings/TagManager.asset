@@ -11,6 +11,7 @@ TagManager:
   - Scoreboard
   - HighScore
   - CurrentScore
+  - Grenade
   layers:
   - Default
   - TransparentFX
