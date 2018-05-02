@@ -6,9 +6,12 @@ public class grenade : MonoBehaviour {
 
     public GameObject Explode;
     public GameObject Burn;
+
+    Animator animator;
+
 	// Use this for initialization
-	void Start () {
-		
+	void awake () {
+        animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -25,6 +28,7 @@ public class grenade : MonoBehaviour {
             Instantiate(Explode, col.gameObject.transform.position, col.gameObject.transform.rotation);
             Instantiate(Burn, col.gameObject.transform.position, col.gameObject.transform.rotation);
             Debug.Log("GRENADE THROWN ON GROUND AHHHHHHHHHHHH!");
+            animator.SetTrigger("GameOver");
             
         }
     }

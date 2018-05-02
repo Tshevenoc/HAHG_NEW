@@ -11,6 +11,7 @@ public class throwCalculation : MonoBehaviour {
     int currentHighScore;
     TextMesh highScore;
     TextMesh currentScore;
+    TextMesh finalScore;
 
     // Use this for initialization
     void Start () {
@@ -18,6 +19,7 @@ public class throwCalculation : MonoBehaviour {
         stake = GameObject.FindGameObjectWithTag("Stake");
         highScore = GameObject.Find("HighScoretext").GetComponent<TextMesh>();
         currentScore = GameObject.Find("CurrentScoretext").GetComponent<TextMesh>();
+        finalScore = GameObject.Find("FinalScore").GetComponent<TextMesh>();
     }
 
     // Update is called once per frame
@@ -33,6 +35,7 @@ public class throwCalculation : MonoBehaviour {
             highScore.text = ((int)distance).ToString();
             currentHighScore = (int)distance;
         }
+        //finalScore.text = currentHighScore.ToString();
     }
 
     void OnCollisionEnter(Collision col) {
